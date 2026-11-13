@@ -16,7 +16,7 @@ export default function Home(){const [menu,setMenu]=useState(false);const [sent,
   <div className="method-title">
     <p className="kicker">NOTRE MÉTHODE</p>
     <h2>Un accompagnement<br/>à chaque étape</h2>
-    <p className="method-intro">De la conception à la livraison, nous faisons avancer votre projet à chaque étape.</p>
+    
   </div>
   <div className="steps">
     {[
