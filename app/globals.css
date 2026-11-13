@@ -129,3 +129,56 @@
 /* Hero crop: keep the upper part of the reception photo visible */
 .hero{background-position:center top!important}
 @media(max-width:720px){.hero{background-position:center top!important}}
+
+
+/* DECOPRAX spacing system — consistent rhythm across all sections */
+:root{--section-space:72px;--section-gutter:5%}
+.hero{min-height:600px;padding:64px var(--section-gutter)}
+.trust{padding:22px var(--section-gutter);gap:22px}
+.section{padding:var(--section-space) var(--section-gutter)}
+.section-head{margin-bottom:38px}
+.service-grid{gap:18px}
+.service-photo{height:158px}
+.service-content{padding:18px;min-height:170px}
+.about{column-gap:38px;row-gap:28px}
+.about-photo{height:290px}
+.facts{gap:24px;padding-left:30px}
+.projects{padding:var(--section-space) var(--section-gutter)}
+.project-heading{margin-bottom:34px}
+.project-grid{gap:18px}
+.project-card>div{height:175px}
+.method-guarantees{padding:42px var(--section-gutter);column-gap:30px}
+.method-panel{column-gap:30px}
+.guarantees-panel{padding-left:30px;gap:20px}
+.contact{min-height:440px}
+.contact-copy{padding:58px 8%}
+.contact form{gap:15px}
+footer{padding:42px var(--section-gutter)}
+@media(max-width:1150px){
+  :root{--section-space:62px}
+  .method-guarantees{padding:36px var(--section-gutter);row-gap:30px}
+  .method-panel{column-gap:24px}
+}
+@media(max-width:720px){
+  :root{--section-space:52px;--section-gutter:20px}
+  .hero{min-height:540px;padding:44px 22px}
+  .trust{padding:20px 18px;gap:16px 12px}
+  .section{padding:var(--section-space) var(--section-gutter)}
+  .section-head{margin-bottom:28px}
+  .service-grid{gap:12px}
+  .service-photo{height:125px}
+  .service-content{padding:13px;min-height:176px}
+  .about{gap:22px}
+  .about-photo{height:230px}
+  .facts{padding:20px 0 0;gap:18px 12px}
+  .projects{padding:52px 20px}
+  .project-heading{margin-bottom:26px}
+  .project-grid{gap:14px}
+  .project-card>div{height:138px}
+  .method-guarantees{padding:30px 18px;gap:28px}
+  .method-panel{gap:24px}
+  .guarantees-panel{padding:22px 0 0;gap:10px}
+  .contact-copy{padding:42px 20px}
+  .contact form{gap:12px}
+  footer{padding:34px 20px}
+}
