@@ -125,3 +125,7 @@
  .guarantees-heading{font-size:13px}
  .guarantees-heading svg{width:20px;height:20px}
 }
+
+/* Hero crop: keep the upper part of the reception photo visible */
+.hero{background-position:center top!important}
+@media(max-width:720px){.hero{background-position:center top!important}}
