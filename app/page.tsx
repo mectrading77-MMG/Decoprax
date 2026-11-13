@@ -26,7 +26,7 @@ export default function Home(){const [menu,setMenu]=useState(false);const [sent,
         ['04','Livraison','Réception des travaux et satisfaction client',Check]
       ] as [string, string, string, typeof Users][]).map(([n,t,d,Icon])=><div className="step-card" key={n}>
         <div className="step-icon"><Icon size={27}/></div>
-        <span className="step-number">{n}</span>
+        
         <b>{t}</b>
         <small>{d}</small>
       </div>)}
