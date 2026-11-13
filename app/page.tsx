@@ -11,6 +11,35 @@ export default function Home(){const [menu,setMenu]=useState(false);const [sent,
 <section className="section services" id="services"><div className="section-head"><p className="kicker">NOS EXPERTISES</p><h2>Des solutions complètes pour vos projets</h2></div><div className="service-grid">{services.map(([title,desc,photo,Icon])=><a className="service-card" href="#contact" key={title}><div className="service-photo" style={{backgroundImage:`url(${img(photo,700)})`}}/><div className="service-content"><Icon/><h3>{title}</h3><p>{desc}</p><ArrowRight className="arrow"/></div></a>)}</div></section>
 <section className="about section" id="about"><div className="about-photo" style={{backgroundImage:`url(${img('photo-1600210-4d1e6f7c2b3a',1000)})`}}/><div className="about-copy"><p className="kicker">À PROPOS</p><h2>DECOPRAX</h2><p>Entreprise du bâtiment créée en 2019, DECOPRAX accompagne vos projets de rénovation, de second œuvre et d’aménagement, avec un accompagnement sur mesure et une exigence de qualité à chaque étape.</p><a className="text-link" href="#contact">En savoir plus <ArrowRight/></a></div><div className="facts"><div><CalendarDays/><span><b>Depuis 2019</b><small>Une expérience reconnue</small></span></div><div><Layers/><span><b>Projets variés</b><small>Résidentiel, tertiaire et commercial</small></span></div><div><Map/><span><b>Toute la France</b><small>Une intervention nationale</small></span></div><div><Users/><span><b>Un interlocuteur unique</b><small>De l’étude à la livraison</small></span></div></div></section>
 <section className="projects" id="projects"><div className="projects-inner"><div className="project-heading"><div><p className="kicker">NOS RÉALISATIONS</p><h2>Découvrez nos projets</h2></div><a className="btn outline" href="#contact">Parler de votre projet <ArrowRight/></a></div><div className="project-grid">{projects.map(([name,type,photo])=><article className="project-card" key={name}><div style={{backgroundImage:`url(${img(photo,800)})`}}/><span>{type}</span><h3>{name}</h3></article>)}</div><p className="disclaimer">Visuels d’ambiance — les réalisations réelles seront intégrées après sélection des photos publiées par DECOPRAX.</p></div></section>
-<section className="method-guarantees"><div className="method section"><div className="method-title"><p className="kicker">NOTRE MÉTHODE</p><h2>Un accompagnement<br/>à chaque étape</h2></div><div className="steps">{[['01','Écoute','et définition de votre projet'],['02','Étude','et proposition personnalisée'],['03','Réalisation','des travaux et suivi de chantier'],['04','Livraison','et satisfaction client']].map(([n,t,d])=><div className="step" key={n}><span>{n}</span><b>{t}</b><small>{d}</small></div>)}</div></div><div className="guarantees section" id="guarantees"><div><p className="kicker">NOS GARANTIES</p><ul>{['Assurance décennale selon les activités couvertes','Responsabilité civile professionnelle','Respect des normes et réglementations applicables','Suivi et contrôle de la qualité','Engagement sur les délais convenus'].map(x=><li key={x}><Check/>{x}</li>)}</ul></div><div className="guarantee-seal"><ShieldCheck/><b>ASSURANCE<br/>DÉCENNALE</b></div></div></section>
+<section className="method-guarantees">
+<div className="method section">
+  <div className="method-title">
+    <p className="kicker">NOTRE MÉTHODE</p>
+    <h2>Un accompagnement<br/>de A à Z</h2>
+    <p className="method-intro">De la conception à la livraison, nous faisons avancer votre projet à chaque étape.</p>
+  </div>
+  <div className="steps">
+    {[
+      ['01','Écoute','Comprendre vos besoins'],
+      ['02','Étude','Définir la solution et le budget'],
+      ['03','Réalisation','Coordonner et suivre les travaux'],
+      ['04','Livraison','Vérifier et remettre le projet']
+    ].map(([n,t,d])=><div className="step" key={n}><span>{n}</span><b>{t}</b><small>{d}</small></div>)}
+  </div>
+</div>
+<div className="guarantees section" id="guarantees">
+  <div className="guarantees-copy">
+    <p className="kicker">NOS GARANTIES</p>
+    <ul>{[
+      'Assurance décennale selon les activités couvertes',
+      'Responsabilité civile professionnelle',
+      'Respect des normes et réglementations',
+      'Suivi et contrôle de la qualité',
+      'Engagement sur les délais convenus'
+    ].map(x=><li key={x}><Check/>{x}</li>)}</ul>
+  </div>
+  <div className="guarantee-seal"><div className="seal-inner"><ShieldCheck/><b>ASSURANCE<br/>DÉCENNALE</b><span>ENGAGEMENT &amp; SÉRÉNITÉ</span></div></div>
+</div>
+</section>
 <section className="contact" id="contact"><div className="contact-image"/><div className="contact-copy"><p className="kicker">PARLONS DE VOTRE PROJET</p><h2>Vous avez un projet ?</h2><p>Contactez DECOPRAX pour une première étude et un devis personnalisé.</p><form onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);const body=encodeURIComponent(`Nom : ${f.get('name')}\nEmail : ${f.get('email')}\nTéléphone : ${f.get('phone')}\nType : ${f.get('type')}\nMessage : ${f.get('message')}`);location.href=`mailto:Decoprax@gmail.com?subject=${encodeURIComponent('Demande de devis DECOPRAX')}&body=${body}`;setSent(true)}}><div className="form-row"><input name="name" placeholder="Votre nom" required/><input name="email" type="email" placeholder="Votre e-mail" required/></div><div className="form-row"><input name="phone" placeholder="Téléphone"/><select name="type"><option>Type de projet</option>{services.map(s=><option key={s[0]}>{s[0]}</option>)}</select></div><textarea name="message" placeholder="Décrivez votre projet" rows={4}/><button className="btn gold" type="submit">Envoyer ma demande <ArrowRight/></button>{sent&&<small className="form-note">Votre application e-mail va s’ouvrir pour envoyer la demande.</small>}</form></div></section>
 <footer><a className="brand footer-brand" href="#top"><img className="brand-logo" src="/decoprax-logo.png" alt="DECOPRAX" /></a><p>Travaux neufs · Rénovation · Pilotage de projet</p><div className="footer-links"><a href="#services">Services</a><a href="#projects">Réalisations</a><a href="#contact">Contact</a><a href="mailto:Decoprax@gmail.com">Decoprax@gmail.com</a></div><small>© {new Date().getFullYear()} DECOPRAX. Tous droits réservés.</small></footer></main>}

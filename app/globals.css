@@ -37,3 +37,28 @@
 .method-guarantees .guarantee-seal b{font-size:9px;letter-spacing:.4px}
 @media(max-width:1000px){.method-guarantees{grid-template-columns:1fr;gap:25px}.method-guarantees .guarantees{border-left:0;border-top:1px solid #d5cec0;padding:22px 0 0}.method-guarantees .guarantees li{white-space:normal}}
 @media(max-width:620px){.method-guarantees{padding:28px 20px}.method-guarantees .method{grid-template-columns:1fr;gap:20px}.method-guarantees .method h2{font-size:25px}.method-guarantees .steps{grid-template-columns:repeat(2,1fr);row-gap:20px}.method-guarantees .guarantees{align-items:flex-start}.method-guarantees .guarantee-seal{width:90px;height:104px;flex-basis:90px}.method-guarantees .guarantees li{font-size:10px}}
+
+/* Premium method + guarantees refinement */
+.method-guarantees{grid-template-columns:minmax(0,1.55fr) minmax(390px,1fr);gap:0;padding:30px 4.2%;background:linear-gradient(110deg,#fff 0%,#fbfaf6 58%,#f5f1e8 100%)}
+.method-guarantees .method{grid-template-columns:minmax(205px,.82fr) minmax(0,1.9fr);gap:24px;align-items:center}
+.method-guarantees .method-title .kicker,.method-guarantees .guarantees .kicker{font-size:12px;letter-spacing:2px;font-weight:800;color:#b88931}
+.method-guarantees .method h2{font-size:clamp(25px,2vw,32px);line-height:1.12;margin:0 0 12px}
+.method-intro{max-width:245px;margin:0;color:#6a655d;font-size:12px;line-height:1.55}
+.method-guarantees .steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:start}
+.method-guarantees .steps:before{content:"";position:absolute;top:20px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,#d6b46c,#a87924,#d6b46c);z-index:0}
+.method-guarantees .step{position:relative;z-index:1;border:0;padding:0 4px;align-items:center;text-align:center;gap:7px;min-width:0}
+.method-guarantees .step span{width:42px;height:42px;border:1.5px solid #bd8c32;background:#fff;border-radius:50%;display:grid;place-items:center;color:#9b6c1c;font-weight:700;font-size:13px;box-shadow:0 0 0 5px #fbfaf6;margin:0 0 7px}
+.method-guarantees .step b{font-size:13px;color:#171511;white-space:nowrap}
+.method-guarantees .step small{font-size:10.5px;line-height:1.35;color:#6c675f;max-width:145px}
+.method-guarantees .guarantees{display:grid;grid-template-columns:minmax(0,1fr) 116px;align-items:center;gap:16px;padding:0 0 0 28px;border-left:1px solid #d3c9b5;background:transparent}
+.method-guarantees .guarantees .kicker{margin:0 0 12px}
+.method-guarantees .guarantees ul{margin:0;gap:10px}
+.method-guarantees .guarantees li{font-size:11px;line-height:1.35;white-space:normal;align-items:flex-start;gap:8px}
+.method-guarantees .guarantees li svg{flex:0 0 16px;margin-top:1px}
+.method-guarantees .guarantee-seal{position:relative;width:112px;height:132px;flex:0 0 112px;clip-path:polygon(50% 0,96% 17%,91% 72%,50% 100%,9% 72%,4% 17%);background:linear-gradient(145deg,#e5c36f 0%,#9b6a19 38%,#171b20 39%,#080b10 78%,#c29235 79%,#e3bd62 100%);padding:5px;filter:drop-shadow(0 8px 9px #4b371c55);border:0;border-radius:0;color:#fff}
+.method-guarantees .seal-inner{width:100%;height:100%;clip-path:polygon(50% 0,96% 17%,91% 72%,50% 100%,9% 72%,4% 17%);background:linear-gradient(145deg,#222a32,#080b10 65%,#2b2112);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:7px;padding:12px 6px}
+.method-guarantees .seal-inner svg{width:31px;height:31px;color:#e4bd62}
+.method-guarantees .seal-inner b{font-size:9px;letter-spacing:.6px;line-height:1.3;color:#fff}
+.method-guarantees .seal-inner span{font-size:5.5px;letter-spacing:.7px;color:#d7b45f}
+@media(max-width:1100px){.method-guarantees{grid-template-columns:1fr;gap:24px}.method-guarantees .guarantees{border-left:0;border-top:1px solid #d3c9b5;padding:22px 0 0;grid-template-columns:minmax(0,1fr) 116px}.method-guarantees .steps:before{left:10%;right:10%}}
+@media(max-width:620px){.method-guarantees{padding:26px 20px}.method-guarantees .method{grid-template-columns:1fr;gap:22px}.method-intro{max-width:100%}.method-guarantees .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 10px}.method-guarantees .steps:before{display:none}.method-guarantees .step small{max-width:160px;font-size:11px}.method-guarantees .guarantees{grid-template-columns:minmax(0,1fr) 88px;gap:10px}.method-guarantees .guarantee-seal{width:86px;height:104px;flex-basis:86px}.method-guarantees .seal-inner svg{width:24px;height:24px}.method-guarantees .seal-inner b{font-size:7px}}
