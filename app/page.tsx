@@ -19,12 +19,12 @@ export default function Home(){const [menu,setMenu]=useState(false);const [sent,
       <span className="method-swoosh"/>
     </div>
     <div className="steps">
-      {[
+      {([
         ['01','Écoute','Définition précise de votre projet',Users],
         ['02','Étude','Proposition personnalisée et chiffrée',ClipboardList],
         ['03','Réalisation','Exécution des travaux et suivi de chantier',HardHat],
         ['04','Livraison','Réception des travaux et satisfaction client',Check]
-      ].map(([n,t,d,Icon])=><div className="step-card" key={n as string}>
+      ] as [string, string, string, typeof Users][]).map(([n,t,d,Icon])=><div className="step-card" key={n}>
         <div className="step-icon"><Icon size={27}/></div>
         <span className="step-number">{n}</span>
         <b>{t}</b>
