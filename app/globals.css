@@ -407,3 +407,18 @@ footer{padding:42px var(--section-gutter)}
  .detail-content{grid-template-columns:1fr;gap:28px;padding:48px 20px}.detail-copy h2{font-size:30px}.detail-copy>p:not(.kicker){font-size:14px}
  .detail-list{padding:22px}.detail-bottom-cta{padding:35px 20px;align-items:flex-start;flex-direction:column}.detail-bottom-cta h2{font-size:29px}.detail-footer{flex-direction:column;text-align:center;padding:26px 20px}
 }
+
+
+/* Conversion and trust improvements */
+.hero h1{max-width:760px;font-size:clamp(38px,4.2vw,58px)}
+.hero .actions .gold{min-width:230px}
+.footer-links{row-gap:14px}
+.mobile-contact-bar{display:none}
+@media(max-width:720px){
+  body{padding-bottom:62px}
+  .mobile-contact-bar{position:fixed;z-index:60;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:#10100e;border-top:1px solid #b88b38;box-shadow:0 -5px 18px #0002}
+  .mobile-contact-bar a{display:flex;align-items:center;justify-content:center;min-height:42px;border-radius:4px;font-size:12px;font-weight:800}
+  .mobile-contact-bar a:first-child{background:linear-gradient(110deg,#c39139,#efd17a);color:#17130d}
+  .mobile-contact-bar a:last-child{border:1px solid #c99f45;color:#f1d98c}
+  .hero .actions .gold{min-width:0}
+}
