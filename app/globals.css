@@ -182,3 +182,121 @@ footer{padding:42px var(--section-gutter)}
   .contact form{gap:12px}
   footer{padding:34px 20px}
 }
+
+
+/* OUR METHOD — refined premium timeline, without step numbers */
+.method-guarantees{
+  grid-template-columns:minmax(0,1.55fr) minmax(360px,1fr);
+  gap:0;
+  padding:54px 5%;
+  background:linear-gradient(135deg,#fff 0%,#faf8f2 58%,#f1ecdf 100%);
+  border-top:1px solid #e9e1d2;
+  border-bottom:1px solid #d9c9a8;
+}
+.method-panel{
+  grid-template-columns:minmax(190px,.78fr) minmax(0,2.2fr);
+  gap:28px;
+  align-items:center;
+  padding-right:30px;
+}
+.method-title .kicker{
+  color:#a87924;
+  font-size:11px;
+  letter-spacing:2.4px;
+  margin-bottom:16px;
+}
+.method-title h2{
+  color:#101c2d;
+  font-size:clamp(27px,2.2vw,36px);
+  line-height:1.12;
+  letter-spacing:-.5px;
+}
+.method-swoosh{width:68%;margin:22px 0 0 8px;border-top-width:3px}
+.method-panel .steps{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  padding-top:0;
+  align-items:stretch;
+}
+.method-panel .steps:before{
+  left:12.5%;right:12.5%;top:34px;height:1px;
+  background:linear-gradient(90deg,transparent,#c59a4b 12%,#c59a4b 88%,transparent);
+  box-shadow:none;
+}
+.step-card{
+  margin:0;
+  min-height:178px;
+  padding:0 10px 18px;
+  border:1px solid #e8e0d1;
+  border-radius:12px;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 8px 24px rgba(31,25,14,.055);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.step-card:hover{
+  transform:translateY(-5px);
+  border-color:#c9a45f;
+  box-shadow:0 14px 28px rgba(31,25,14,.10);
+}
+.step-icon{
+  position:relative;
+  top:auto;left:auto;
+  width:68px;height:68px;
+  flex:0 0 68px;
+  margin:0 0 14px;
+  border:1px solid #c49a48;
+  background:linear-gradient(145deg,#fff,#f5f0e5);
+  color:#9b722b;
+  box-shadow:0 0 0 7px #f8f5ed;
+}
+.step-icon svg{width:25px!important;height:25px!important;stroke-width:1.55!important}
+.step-card b{
+  width:auto;
+  margin:0;
+  padding:0;
+  background:none;
+  border-radius:0;
+  color:#111d30;
+  font-size:13px;
+  font-weight:700;
+  white-space:normal;
+}
+.step-card small{
+  padding:8px 0 0;
+  max-width:155px;
+  color:#68645c;
+  font-size:10.5px;
+  font-weight:400;
+  line-height:1.45;
+}
+.guarantees-panel{
+  grid-template-columns:minmax(0,1fr) 112px;
+  gap:14px;
+  padding-left:28px;
+  border-left:1px solid #d5c8ae;
+}
+.guarantees-heading{margin-bottom:14px}
+@media(max-width:1150px){
+  .method-guarantees{grid-template-columns:1fr;gap:34px;padding:44px 5%}
+  .method-panel{padding:0;grid-template-columns:minmax(190px,.72fr) minmax(0,2fr)}
+  .guarantees-panel{border-left:0;border-top:1px solid #d5c8ae;padding:26px 0 0}
+}
+@media(max-width:700px){
+  .method-guarantees{padding:38px 20px;gap:30px}
+  .method-panel{grid-template-columns:1fr;gap:25px}
+  .method-title h2{font-size:30px}
+  .method-swoosh{display:block;width:90px;margin-top:15px}
+  .method-panel .steps{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:30px 14px;
+    padding-top:0;
+  }
+  .method-panel .steps:before{display:none}
+  .step-card{min-height:158px;padding:0 10px 16px}
+  .step-icon{width:58px;height:58px;flex-basis:58px;margin-bottom:12px;box-shadow:0 0 0 5px #f8f5ed}
+  .step-icon svg{width:22px!important;height:22px!important}
+  .step-card b{font-size:13px}
+  .step-card small{font-size:10.5px;max-width:170px}
+  .guarantees-panel{grid-template-columns:minmax(0,1fr) 86px;gap:10px;padding-top:22px}
+  .guarantee-seal{width:82px;height:100px;flex-basis:82px}
+}
