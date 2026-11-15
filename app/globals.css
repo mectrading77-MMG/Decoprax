@@ -368,3 +368,42 @@ footer{padding:42px var(--section-gutter)}
   .about{padding-top:30px!important}
   .services .service-card{align-self:start}
 }
+
+/* Dedicated pages for each expertise */
+.service-detail-page{min-height:100vh;background:#f8f7f3;color:#151511}
+.detail-header{height:88px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid #e9e2d4}
+.detail-brand img{width:220px;height:auto;max-height:72px;object-fit:contain}
+.detail-header nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600}
+.detail-nav-cta{display:flex;align-items:center;gap:9px;padding:13px 17px;background:#c99b3c;color:#17130d;border-radius:5px}
+.detail-hero{min-height:440px;background-size:cover;background-position:center;display:flex;align-items:center;padding:65px 8%;color:white}
+.detail-hero-copy{max-width:680px}
+.detail-back{display:inline-flex;align-items:center;gap:8px;color:#f1dcae;font-size:12px;margin-bottom:38px}
+.detail-hero .kicker{color:#e5bd62;margin-bottom:14px}
+.detail-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(42px,5vw,64px);line-height:1.05;margin:0 0 18px}
+.detail-hero-copy>p:not(.kicker){max-width:620px;color:#f1eee8;font-size:17px;line-height:1.65;margin:0 0 25px}
+.detail-gold-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(110deg,#c39139,#efd17a);color:#17130d;padding:15px 20px;font-size:13px;font-weight:700;border-radius:4px}
+.detail-content{max-width:1200px;margin:auto;padding:76px 5%;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
+.detail-copy h2,.detail-bottom-cta h2{font:600 clamp(28px,3vw,40px)/1.15 'Playfair Display',Georgia,serif;color:#111d30;margin:0 0 22px}
+.detail-copy>p:not(.kicker){font-size:15px;line-height:1.85;color:#5c5850;margin:0 0 16px}
+.detail-list{background:#fff;border:1px solid #e9e1d2;padding:30px;border-radius:8px;box-shadow:0 12px 30px #1b170c0a}
+.detail-list-heading{display:flex;align-items:center;gap:15px;padding-bottom:20px;border-bottom:1px solid #eee8dc}
+.detail-list-heading>svg{width:38px;height:38px;color:#b88931;stroke-width:1.5}
+.detail-list-heading span{font-size:10px;letter-spacing:2px;color:#a87924;font-weight:800}
+.detail-list-heading h2{font:600 21px 'Playfair Display',Georgia,serif;margin:4px 0 0;color:#111d30}
+.detail-list ul{list-style:none;padding:0;margin:22px 0;display:grid;gap:16px}
+.detail-list li{display:flex;gap:11px;align-items:flex-start;font-size:13px;line-height:1.5;color:#49463f}
+.detail-list li svg{width:17px;height:17px;flex:0 0 17px;color:#b88931}
+.detail-text-link{display:inline-flex;align-items:center;gap:10px;color:#95691e;font-size:13px;font-weight:700;border-bottom:1px solid #c99b3c;padding-bottom:5px}
+.detail-bottom-cta{background:#101820;color:white;padding:42px 8%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.detail-bottom-cta .kicker{color:#dfb85e}
+.detail-bottom-cta h2{color:white;margin-bottom:9px}
+.detail-bottom-cta p:not(.kicker){color:#d2d0c9;font-size:13px;margin:0}
+.detail-footer{background:#080808;color:#aaa;padding:26px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px}
+.detail-footer img{width:150px;max-height:54px;object-fit:contain}
+.detail-not-found{padding:100px 8%;text-align:center}
+@media(max-width:720px){
+ .detail-header{height:72px;padding:0 16px}.detail-brand img{width:155px;max-height:55px}.detail-header nav{gap:13px;font-size:11px}.detail-header nav>a:first-child,.detail-header nav>a:nth-child(2){display:none}.detail-nav-cta{padding:11px 12px}
+ .detail-hero{min-height:440px;padding:40px 22px;background-position:center}.detail-back{margin-bottom:34px}.detail-hero h1{font-size:40px}.detail-hero-copy>p:not(.kicker){font-size:14px}
+ .detail-content{grid-template-columns:1fr;gap:28px;padding:48px 20px}.detail-copy h2{font-size:30px}.detail-copy>p:not(.kicker){font-size:14px}
+ .detail-list{padding:22px}.detail-bottom-cta{padding:35px 20px;align-items:flex-start;flex-direction:column}.detail-bottom-cta h2{font-size:29px}.detail-footer{flex-direction:column;text-align:center;padding:26px 20px}
+}
