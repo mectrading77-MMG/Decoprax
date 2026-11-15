@@ -422,3 +422,11 @@ footer{padding:42px var(--section-gutter)}
   .mobile-contact-bar a:last-child{border:1px solid #c99f45;color:#f1d98c}
   .hero .actions .gold{min-width:0}
 }
+
+
+/* Local address and map access */
+.contact-address{display:flex;align-items:center;gap:9px;color:#f0d38a!important;font-size:13px!important;margin:14px 0 5px!important}
+.contact-address svg{color:#d4aa58;flex:0 0 17px}
+.contact-map-link{display:inline-flex;align-items:center;gap:8px;color:#e7c678;font-size:12px;font-weight:700;margin:0 0 8px}
+.contact-map-link:hover{text-decoration:underline}
+.footer-links a{max-width:100%;text-align:center}
