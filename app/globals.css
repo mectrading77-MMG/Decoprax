@@ -359,3 +359,12 @@ footer{padding:42px var(--section-gutter)}
   .services .service-content p{font-size:10.5px;line-height:1.45}
   .services .service-content .arrow{left:12px;bottom:12px}
 }
+
+
+/* Mobile expertise section: eliminate the oversized gap after the cards */
+@media(max-width:720px){
+  .services{padding-bottom:28px!important}
+  .services .service-grid{margin-bottom:0}
+  .about{padding-top:30px!important}
+  .services .service-card{align-self:start}
+}
